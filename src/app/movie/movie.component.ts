@@ -1,8 +1,32 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { RouteService } from '../route.service';
-import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Movie } from '../movie';
+import { SwiperOptions } from 'swiper';
+
+import SwiperCore , {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Virtual,
+  Zoom,
+  Autoplay,
+  Thumbs,
+  Controller,
+} from 'swiper';
+
+SwiperCore.use([
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Virtual,
+  Zoom,
+  Autoplay,
+  Thumbs,
+  Controller
+]);
 
 @Component({
   selector: 'app-movie',
@@ -27,5 +51,13 @@ export class MovieComponent implements OnInit {
     console.log(this.movie)
 		this.state = this.state === 'collapsed' ? 'expanded' : 'collapsed';
 	}
-  
+
+  config: SwiperOptions = {
+    slidesPerView: 3,
+    spaceBetween: 50,
+    navigation: true,
+    pagination: { clickable: true },
+    scrollbar: { draggable: true },
+  };
+ 
 }

@@ -48,6 +48,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MovieComponent } from './movie/movie.component';
 
+//Swiper
+import { SwiperModule } from 'swiper/angular';
+
 
 @NgModule({
   declarations: [
@@ -99,6 +102,7 @@ import { MovieComponent } from './movie/movie.component';
 		FlexLayoutModule,
 		HttpClientModule,
 		ReactiveFormsModule,
+		SwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

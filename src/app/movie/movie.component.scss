@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+mat-card{
+	background: #fff;
+	//background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,224,224,1) 100%);
+	margin-top: 40px !important;
+    color: #000;
+}
+
+.expandable-conten{
+	overflow: hidden;
+}
+
+mat-card img{
+    margin-left: 1%;
+    object-fit: cover; /*this makes the image in src fit to the size specified below*/
+    width: 99%; 
+    height: 100%;
+}
+  
+mat-card-content{
+    font-family: 'League Gothic', sans-serif;
+    font-size: 20px;
+}

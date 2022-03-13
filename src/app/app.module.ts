@@ -48,6 +48,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MovieComponent } from './movie/movie.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

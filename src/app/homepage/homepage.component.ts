@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
+import { MovieComponent} from '../movie/movie.component'
 
 @Component({
   selector: 'app-homepage',

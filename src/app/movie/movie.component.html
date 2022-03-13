@@ -1,1 +1,21 @@
-<p>movie works!</p>
+<div fxLayout="row wrap" fxLayoutGap="20px">
+<div fxFlex="23%" *ngFor="let m of movie" >
+  <mat-card class="mat-elevation-z4" >
+    <mat-card-header>
+        <mat-card-title>{{m.title}}</mat-card-title>
+        <mat-card-subtitle style="color: #000;">({{m.original_language}})</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{m.poster_path}}" alt="Affiche de moovie">
+    <mat-card-content>
+        Description:
+            <p>{{m.overview}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <mat-icon (click)="toggle()">remove_red_eye</mat-icon>
+        <div fxFlex></div>
+        {{m.vote_count}} <mat-icon>favorite</mat-icon> 
+    </mat-card-actions>
+</mat-card>
+</div>
+</div>
+

@@ -36,15 +36,34 @@ SwiperCore.use([
 })
 export class MovieComponent implements OnInit {
   state: string = 'collapsed';
-  movie:Movie[]=[];
+  movie: Movie[]=[];
+  movieAlea?: Movie;
+  imgAlea?: string;
+  descAlea?: string;
+  titreAlea?: string;
   
   constructor(private api:RouteService) { }
   ngOnInit(): void {
-    this.api.getMovieList().subscribe(r => {
-			console.log(r);
+    this.getAllMovie();
+    
+  }
+
+
+  getRamdomPoster(max:number) {
+    const randomInt = Math.floor(Math.random() * max);
+    this.movieAlea = this.movie[randomInt];
+    this.imgAlea = this.movieAlea.poster_path;
+    this.descAlea = this.movieAlea.overview
+    this.titreAlea = this.movieAlea.title
+  }
+
+    getAllMovie(){
+     this.api.getMovieList().subscribe(async r => {
+      console.log(r);
       this.movie = r;
-		});
-  
+      await this.getRamdomPoster(this.movie.length);
+      
+    });
   }
 
   toggle(): void {

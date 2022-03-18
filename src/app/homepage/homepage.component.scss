@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 .content{
     margin-left: 10px;
@@ -10,3 +11,8 @@
     flex: 1 1 auto;
   }
 
+mat-toolbar {
+    background-color: #141414;
+    font-family: 'Anton', sans-serif;
+    font-size: 45px;
+}

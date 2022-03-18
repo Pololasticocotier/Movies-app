@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@1&display=swap');
 
 mat-card{
 	background: #fff;
@@ -16,6 +17,18 @@ mat-card img{
     object-fit: cover; /*this makes the image in src fit to the size specified below*/
     width: 99%; 
     height: 100%;
+    border-radius:  4px;
+}
+
+mat-card-title{
+    a{
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    a:hover{
+        color: red;
+    }
 }
   
 mat-card-content{
@@ -26,9 +39,49 @@ mat-card-content{
 swiper {
     height: 45%;
     width: 100%;
+    
 }
 
 .semiHeadear{
-    filter: blur(3px);
-    
+    color:#fff;
+    font-family: 'Crete Round', serif;
+    img:hover{
+        filter: blur(0);
+    }
+    img{
+        float: left;
+        margin-right: 10px;
+        width: 60vh;
+        filter: blur(3px);
+        border-radius:  4px;
+    }
+    .title{
+        font-size: 65px;
+        font-family: 'League Gothic', sans-serif;
+        a{
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a:hover{
+            color: red;
+        }
+    }
+    .desc{
+        margin-top: 30px;
+        margin-right: 70px;
+        font-size: 23px;
+    }
+    .actionR{
+        position: absolute;
+        bottom: 30px;
+        left: 65vh;
+        font-size: 32px;
+    }
+    .actionL{
+        position: absolute;
+        bottom: 30px;
+        left: 90%;
+        font-size: 32px;
+    }
 }

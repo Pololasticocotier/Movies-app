@@ -1,4 +1,7 @@
+import { Genre } from "./genre";
+
 export interface Movie{
+    id:number;
     original_title:string;
     poster_path:string;
     title:string;
@@ -6,5 +9,8 @@ export interface Movie{
     release_date:string;
     overview:string;
     vote_count:number;
+    vote_average:number;
+    popularity:number;
+    genres:Genre[];
 }
 

@@ -15,6 +15,7 @@ import SwiperCore , {
   Thumbs,
   Controller,
 } from 'swiper';
+import { Genre } from '../genre';
 
 SwiperCore.use([
   Navigation,
@@ -37,14 +38,21 @@ SwiperCore.use([
 export class MovieComponent implements OnInit {
   state: string = 'collapsed';
   movie: Movie[]=[];
+  genre: Genre[]=[];
   movieAlea?: Movie;
+  idAlea?:number;
   imgAlea?: string;
   descAlea?: string;
+  langAlea?: string;
   titreAlea?: string;
+  voteAlea?:number;
+  noteAlea?:number;
+  genreAlea?:Genre[];
   
   constructor(private api:RouteService) { }
   ngOnInit(): void {
     this.getAllMovie();
+    this.getAllCat();
     
   }
 
@@ -52,9 +60,14 @@ export class MovieComponent implements OnInit {
   getRamdomPoster(max:number) {
     const randomInt = Math.floor(Math.random() * max);
     this.movieAlea = this.movie[randomInt];
+    this.idAlea = this.movieAlea.id;
     this.imgAlea = this.movieAlea.poster_path;
-    this.descAlea = this.movieAlea.overview
-    this.titreAlea = this.movieAlea.title
+    this.langAlea = this.movieAlea.original_language;
+    this.descAlea = this.movieAlea.overview;
+    this.titreAlea = this.movieAlea.title;
+    this.voteAlea = this.movieAlea.vote_count;
+    this.noteAlea = this.movieAlea.vote_average;
+    this.genreAlea = this.movieAlea.genres;
   }
 
     getAllMovie(){
@@ -65,6 +78,13 @@ export class MovieComponent implements OnInit {
       
     });
   }
+
+    getAllCat(){
+      this.api.getCatList().subscribe(async r => {
+          console.log(r);
+      })
+    }
+
 
   toggle(): void {
     console.log(this.movie)

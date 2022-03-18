@@ -50,13 +50,15 @@ import { MovieComponent } from './movie/movie.component';
 
 //Swiper
 import { SwiperModule } from 'swiper/angular';
+import { MovieInformationComponent } from './movie-information/movie-information.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    MovieComponent
+    MovieComponent,
+    MovieInformationComponent
   ],
   imports: [
     BrowserModule,

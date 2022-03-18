@@ -1,7 +1,7 @@
 <div class="semiHeadear">
     <img src={{imgAlea}} alt="">
     <div class="title"> 
-        <a href="/{{idAlea}}"> {{titreAlea}} </a>
+        <a href="film/{{idAlea}}"> {{titreAlea}} </a>
     </div>
     ({{langAlea}})
     <ng-container style="white-space: pre-wrap" *ngFor="let g of genreAlea"> 
@@ -24,7 +24,7 @@
     <ng-template swiperSlide *ngFor="let m of movie">
         <mat-card class="mat-elevation-z4">
             <mat-card-header>
-                <mat-card-title><a href="">{{m.title}}</a></mat-card-title>
+                <mat-card-title><a href="film/{{m.id}}">{{m.title}}</a></mat-card-title>
             </mat-card-header>
             <img mat-card-image src="{{m.poster_path}}" alt="Affiche de moovie">
         </mat-card>

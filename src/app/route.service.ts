@@ -22,6 +22,11 @@ export class RouteService {
 			.get<Movie[]>(`${this.API_URL}movies`, { headers: this.headers });
 	}
 
+	public getMovie(id:Number): Observable<Movie> {
+		return this.httpClient
+			.get<Movie>(`${this.API_URL}movies/${id}`, { headers: this.headers });
+	}
+
   public getCatList(): Observable<Genre[]> {
 		return this.httpClient
 			.get<Genre[]>(`${this.API_URL}genres`, { headers: this.headers });

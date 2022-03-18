@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.content{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 16px;
+    
+}
+
+.espace {
+    flex: 1 1 auto;
+  }
+
+mat-toolbar {
+    background-color: #141414;
+    font-family: 'Anton', sans-serif;
+    font-size: 45px;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+a:hover{
+    color: red;
+}
+
+.content{
+    color:#fff;
+    font-family: 'Crete Round', serif;
+    img{
+        float: left;
+        margin-right: 10px;
+        width: 55vh;
+        border-radius:  4px;
+    }
+    .title{
+        font-size: 65px;
+        font-family: 'League Gothic', sans-serif;
+        a{
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a:hover{
+            color: red;
+        }
+    }
+    .desc{
+        margin-top: 30px;
+        margin-right: 70px;
+        font-size: 23px;
+    }
+    .info{
+        font-size: 23px;
+    }
+}

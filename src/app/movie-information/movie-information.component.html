@@ -1,0 +1,27 @@
+<mat-toolbar>
+    <span class="titre"> <a href="/"> Moovies ! </a> </span> 📽️
+</mat-toolbar>
+
+
+<div class="content">
+    <img src={{movie?.poster_path}} alt="">
+    <div class="title">
+        {{movie?.title}}
+    </div>
+    ({{movie?.original_language}})
+    <ng-container style="white-space: pre-wrap" *ngFor="let g of movie?.genres">
+        [{{g.name}}]
+    </ng-container>
+    <div class="desc"> {{movie?.overview}} </div>
+    
+    <div class="info">
+        <p>Release Date: {{movie?.release_date}}</p>
+        
+        <p>Popularity: {{movie?.popularity}}</p>
+
+        <p>Vote Average : {{movie?.vote_average}}/10</p>
+
+        <p>Likes : {{movie?.vote_count}} <mat-icon>favorite</mat-icon></p>
+
+    </div>
+</div>

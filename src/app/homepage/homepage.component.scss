@@ -16,3 +16,12 @@ mat-toolbar {
     font-family: 'Anton', sans-serif;
     font-size: 45px;
 }
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+a:hover{
+    color: red;
+}

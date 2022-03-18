@@ -6,7 +6,7 @@
 <div class="content">
     <img src={{movie?.poster_path}} alt="">
     <div class="title">
-        {{movie?.title}}
+        <a href="{{movie?.homepage}}">{{movie?.title}}</a>
     </div>
     ({{movie?.original_language}})
     <ng-container *ngFor="let g of movie?.genres">
@@ -23,9 +23,10 @@
 
         <p>Likes : {{movie?.vote_count}} <mat-icon>favorite</mat-icon></p>
 
-        <p>Revenue: {{movie?.revenue}} </p>
+        <p>Budget: {{movie?.budget}}$  / Revenue: {{movie?.revenue}}$ / Runtime: {{movie?.runtime}}</p>
 
-        <p>Runtime: {{movie?.runtime}} </p>
-
+        <p>Status: {{movie?.status}} </p>
+        
+        
     </div>
 </div>

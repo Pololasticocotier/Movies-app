@@ -14,5 +14,8 @@ export interface Movie{
     genres:Genre[];
     revenue:number;
     runtime:number;
+    budget:number;
+    status:number;
+    homepage:string;
 }
 

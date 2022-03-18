@@ -1,0 +1,56 @@
+<mat-toolbar>
+    <span class="titre"> <a href="/"> Moovies ! </a> </span> 📽️
+</mat-toolbar>
+
+<div class="semiHeadear">
+    <img src={{imgAlea}} alt="">
+    <div class="title"> 
+        <a href="film/{{idAlea}}"> {{titreAlea}} </a>
+    </div>
+    ({{langAlea}})
+    <ng-container *ngFor="let g of genreAlea"> 
+        [{{g.name}}]
+    </ng-container>
+    <div class="desc"> {{descAlea}} </div>
+    <div class="actionR"> 
+        {{noteAlea}}/10
+    </div>
+    <div class="actionL"> 
+        {{voteAlea}} <mat-icon>favorite</mat-icon>
+    </div>
+</div>
+
+
+
+<swiper [slidesPerView]="4" [spaceBetween]="50" [autoplay]="{ delay: 2000, disableOnInteraction: false }"
+    [navigation]="true">
+    <ng-template swiperSlide *ngFor="let m of movie">
+        <mat-card class="mat-elevation-z4">
+            <mat-card-header>
+                <mat-card-title><a href="film/{{m.id}}">{{m.title}}</a></mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{m.poster_path}}" alt="Affiche de moovie">
+        </mat-card>
+    </ng-template>
+</swiper>
+
+
+
+
+<div *ngFor="let mg of moviefiltered">
+    <p>{{mg.genre.name}}:</p>
+    <swiper [slidesPerView]="4" [spaceBetween]="50"
+        [navigation]="true">
+        <ng-template swiperSlide *ngFor="let m of mg.movies">
+                <mat-card class="mat-elevation-z4">
+                    <mat-card-header>
+                        <mat-card-title><a href="film/{{m.id}}">{{m.title}}</a></mat-card-title>
+                    </mat-card-header>
+                    <img mat-card-image src="{{m.poster_path}}" alt="Affiche de moovie">
+                </mat-card>
+        </ng-template>
+    </swiper>
+
+</div>
+
+

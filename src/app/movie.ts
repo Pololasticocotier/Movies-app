@@ -12,5 +12,7 @@ export interface Movie{
     vote_average:number;
     popularity:number;
     genres:Genre[];
+    revenue:number;
+    runtime:number;
 }
 

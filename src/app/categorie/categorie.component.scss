@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 mat-card{
 	background: #fff;
@@ -85,3 +86,27 @@ swiper {
     }
 }
 
+.espace {
+    flex: 1 1 auto;
+  }
+
+mat-toolbar {
+    background-color: #141414;
+    font-family: 'Anton', sans-serif;
+    font-size: 45px;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+a:hover{
+    color: red;
+}
+
+p{
+    font-size: 40px;
+    font-family: 'League Gothic', sans-serif;
+    color: #fff;
+}

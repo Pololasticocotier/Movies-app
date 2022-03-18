@@ -9,7 +9,7 @@
         {{movie?.title}}
     </div>
     ({{movie?.original_language}})
-    <ng-container style="white-space: pre-wrap" *ngFor="let g of movie?.genres">
+    <ng-container *ngFor="let g of movie?.genres">
         [{{g.name}}]
     </ng-container>
     <div class="desc"> {{movie?.overview}} </div>

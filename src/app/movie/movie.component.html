@@ -4,7 +4,7 @@
         <a href="film/{{idAlea}}"> {{titreAlea}} </a>
     </div>
     ({{langAlea}})
-    <ng-container style="white-space: pre-wrap" *ngFor="let g of genreAlea"> 
+    <ng-container *ngFor="let g of genreAlea"> 
         [{{g.name}}]
     </ng-container>
     <div class="desc"> {{descAlea}} </div>
@@ -37,8 +37,14 @@
     <div fxFlex="23%" *ngFor="let m of movie">
         <mat-card class="mat-elevation-z4">
             <mat-card-header>
-                <mat-card-title>{{m.title}}</mat-card-title>
-                <mat-card-subtitle style="color: #000;">({{m.original_language}})</mat-card-subtitle>
+                <mat-card-title> <a href="film/{{m.id}}"> {{m.title}} </a> </mat-card-title>
+                <mat-card-subtitle style="color: #000;">
+                    ({{m.original_language}}) 
+                    <br>
+                    <ng-container *ngFor="let g of m?.genres">
+                        [{{g.name}}]
+                    </ng-container>
+                </mat-card-subtitle>
             </mat-card-header>
             <img mat-card-image src="{{m.poster_path}}" alt="Affiche de moovie">
             <mat-card-content>
@@ -46,7 +52,7 @@
                 <p>{{m.overview}}</p>
             </mat-card-content>
             <mat-card-actions>
-                <mat-icon (click)="toggle()">remove_red_eye</mat-icon>
+                {{m.release_date}}
                 <div fxFlex></div>
                 {{m.vote_count}} <mat-icon>favorite</mat-icon>
             </mat-card-actions>

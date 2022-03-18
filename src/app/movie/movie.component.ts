@@ -86,10 +86,6 @@ export class MovieComponent implements OnInit {
     }
 
 
-  toggle(): void {
-    console.log(this.movie)
-		this.state = this.state === 'collapsed' ? 'expanded' : 'collapsed';
-	}
 
   config: SwiperOptions = {
     slidesPerView: 3,
